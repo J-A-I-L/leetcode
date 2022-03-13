@@ -1,4 +1,4 @@
-package com.leetcode.valid_parentheses;
+package com.leetcode._20_valid_parentheses;
 
 class Solution_1 {
     public boolean isValid(String s) {
