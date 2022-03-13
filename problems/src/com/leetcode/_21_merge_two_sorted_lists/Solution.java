@@ -1,4 +1,4 @@
-package com.leetcode.merge_two_sorted_lists;
+package com.leetcode._21_merge_two_sorted_lists;
 
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

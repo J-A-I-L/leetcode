@@ -1,4 +1,4 @@
-package com.leetcode.merge_two_sorted_lists;
+package com.leetcode._21_merge_two_sorted_lists;
 
 import java.util.Arrays;
 
