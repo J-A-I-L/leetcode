@@ -1,4 +1,4 @@
-package com.leetcode.rotate_list;
+package com.leetcode._61_rotate_list;
 
 /**
  * Definition for singly-linked list.

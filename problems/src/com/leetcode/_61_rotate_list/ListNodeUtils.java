@@ -1,9 +1,8 @@
-package com.leetcode.rotate_list;
+package com.leetcode._61_rotate_list;
 
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public class ListNodeUtils {
