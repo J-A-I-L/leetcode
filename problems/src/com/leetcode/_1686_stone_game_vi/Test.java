@@ -1,4 +1,4 @@
-package com.leetcode.stone_game_vi;
+package com.leetcode._1686_stone_game_vi;
 
 
 import java.util.Arrays;
