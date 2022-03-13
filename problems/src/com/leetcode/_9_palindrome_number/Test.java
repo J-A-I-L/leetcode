@@ -1,4 +1,4 @@
-package com.leetcode.palindrome_number;
+package com.leetcode._9_palindrome_number;
 
 
 import java.util.Arrays;
