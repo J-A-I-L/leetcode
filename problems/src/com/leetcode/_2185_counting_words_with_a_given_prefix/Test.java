@@ -1,4 +1,4 @@
-package com.leetcode._2185_counting_words_with_a_given_prefix._2190_most_frequent_number_following_key_in_an_array;
+package com.leetcode._2185_counting_words_with_a_given_prefix;
 
 import java.util.Arrays;
 
@@ -9,8 +9,6 @@ import java.util.Arrays;
  * Start time:      2022-03-16 11:15
  * End time:        2022-03-16 11:30
  */
-
-
 public enum Test {
     EXAMPLE_1(new String[]{"pay","attention","practice","attend"}, "at", 2),
     EXAMPLE_2(new String[]{"leetcode","win","loops","success"}, "code", 0),

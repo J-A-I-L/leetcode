@@ -10,8 +10,6 @@ import java.util.List;
  * Start time:      2022-03-15 19:38
  * End time:        2022-03-15 20:20
  */
-
-
 public enum Test {
     EXAMPLE_1(new int[]{1,100,200,1,100}, 1, 100),
     EXAMPLE_2(new int[]{2,2,2,2,3}, 2, 2),
