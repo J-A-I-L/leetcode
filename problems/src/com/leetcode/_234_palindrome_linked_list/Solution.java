@@ -11,26 +11,22 @@ package com.leetcode._234_palindrome_linked_list;
  * }
  */
 class Solution {
+    ListNode node;
+
     public boolean isPalindrome(ListNode head) {
-        ListNode reversedListHead = reverseList(head, null);
-
-        while (head.next != null && reversedListHead.next != null) {
-            if (head.val != reversedListHead.val){
-                return false;
-            }
-            head = head.next;
-            reversedListHead = reversedListHead.next;
+        if (head == null) {
+            return true;
         }
-        return head.val == reversedListHead.val;
-    }
+        if (node == null) {
+            node = head;
+        }
 
-    private ListNode reverseList(ListNode straightList, ListNode reverserdList) {
-        ListNode currentNode = new ListNode(straightList.val, reverserdList);
-
-        if (straightList.next == null) {
-            return currentNode;
+        boolean isPalindrome = isPalindrome(head.next);
+        if (head.val == node.val) {
+            node = node.next;
         } else {
-            return reverseList(straightList.next, currentNode);
+            return false;
         }
+        return isPalindrome;
     }
 }
