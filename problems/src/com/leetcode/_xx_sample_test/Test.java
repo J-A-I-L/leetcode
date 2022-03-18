@@ -2,7 +2,6 @@ package com.leetcode._xx_sample_test;
 
 import java.util.Arrays;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * https://leetcode.com/problems/sample-test/
@@ -12,28 +11,29 @@ import java.util.stream.Collectors;
  * End time:        2022-03-1? ??:??
  */
 public enum Test {
-    EXAMPLE_1(new int[]{1, 2, 3}, new int[]{1, 2, 4}),
+    EXAMPLE_1(new int[]{1,2,2,1}, true),
     ;
 
-    public final int[] input;
+    public final ListNode input;
 
-    private final int[] expectedResult;
+    public final boolean expectedResult;
 
-    Test(int[] input, int[] expectedResult) {
-        this.input = input;
+    Test(int[] list, boolean expectedResult) {
+        this.input = ListNodeUtils.buildListNode(list);
         this.expectedResult = expectedResult;
     }
 
-    public void print(int[] realResult) {
-        boolean isTestOk = Arrays.equals(expectedResult, realResult);
-//        boolean isTestOk = expectedResult == realResult;
-        Function<int[], String> primitivesArrayToString = primitivesArray
-                -> Arrays.stream(primitivesArray).mapToObj(String::valueOf)
-                    .collect(Collectors.joining(", ", "[", "]"));
+    public void print(boolean realResult) {
+//        boolean isTestOk = Arrays.equals(expectedResult, realResult);
+        boolean isTestOk = expectedResult == realResult;
+//        Function<int[], String> primitivesArrayToString = primitivesArray
+//                -> Arrays.stream(primitivesArray).mapToObj(String::valueOf)
+//                    .collect(Collectors.joining(", ", "[", "]"));
 //        Function<Integer, String> primitiveToString = primitive -> "" + primitive;
+        Function<ListNode, String> listNodeToString = ListNodeUtils::listNodeToString;
 
-        String expectedResultString = primitivesArrayToString.apply(expectedResult);
-        String realResulString = primitivesArrayToString.apply(realResult);
+        String expectedResultString = "" + expectedResult;
+        String realResulString = "" + realResult;
         String formattedString = name() + ": " + (isTestOk ? "OK" : "KO") +
                 "\nexpected=" + expectedResultString + ",\tgot=" + realResulString +
                 '\n';
@@ -45,7 +45,7 @@ public enum Test {
         final Solution solution = new Solution();
         Arrays.stream(Test.values())
                 .forEach(testData -> {
-                    int[] realResult = solution.sampleTest(testData.input);
+                    boolean realResult = solution.sampleTest(testData.input);
                     testData.print(realResult);
                 });
     }
