@@ -1,4 +1,4 @@
-package com.leetcode._26_power_of_three;
+package com.leetcode._326_power_of_three;
 
 class Solution_1 {
     public boolean isPowerOfThree(int n) {

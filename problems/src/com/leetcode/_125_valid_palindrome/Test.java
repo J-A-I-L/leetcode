@@ -1,29 +1,29 @@
-package com.leetcode._26_power_of_three;
+package com.leetcode._125_valid_palindrome;
 
 import java.util.Arrays;
-import java.util.function.Function;
 
 /**
- * https://leetcode.com/problems/power-of-three/
+ * https://leetcode.com/problems/valid-palindrome/
  * Level: Easy
  * <p>
- * Start time:      2022-03-18 14:54
- * End time:        2022-03-18 15:14
+ * Start time:      2022-03-18 15:15
+ * End time:        2022-03-18 15:37
  */
 public enum Test {
-    EXAMPLE_1(27, true),
-    EXAMPLE_2(0, false),
-    EXAMPLE_3(9, true),
-    EXAMPLE_4(10, false),
-    EXAMPLE_5(-3, false),
+    EXAMPLE_1("A man, a plan, a canal: Panama", true),
+    EXAMPLE_2("race a car", false),
+    EXAMPLE_3(" ", true),
+    EXAMPLE_4("", true),
+    EXAMPLE_5("a11a", true),
+    EXAMPLE_6("a1b1a", true),
     ;
 
-    public final int input;
+    public final String input;
 
     public final boolean expectedResult;
 
-    Test(int n, boolean expectedResult) {
-        this.input = n;
+    Test(String s, boolean expectedResult) {
+        this.input = s;
         this.expectedResult = expectedResult;
     }
 
@@ -49,7 +49,7 @@ public enum Test {
         final Solution solution = new Solution();
         Arrays.stream(Test.values())
                 .forEach(testData -> {
-                    boolean realResult = solution.isPowerOfThree(testData.input);
+                    boolean realResult = solution.isPalindrome(testData.input);
                     testData.print(realResult);
                 });
     }
