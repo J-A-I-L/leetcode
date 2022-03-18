@@ -7,7 +7,7 @@ import java.util.Arrays;
  * Level: Easy
  * <p>
  * Start time:      2022-03-18 15:39
- * End time:        2022-03-18 15:??
+ * End time:        2022-03-18 15:52
  */
 public enum Test {
     EXAMPLE_1("ab", "ba",  true),
