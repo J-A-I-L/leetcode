@@ -45,7 +45,7 @@ public enum Test {
         final Solution solution = new Solution();
         Arrays.stream(Test.values())
                 .forEach(testData -> {
-                    boolean realResult = solution.sampleTest(testData.input);
+                    var realResult = solution.sampleTest(testData.input);
                     testData.print(realResult);
                 });
     }
