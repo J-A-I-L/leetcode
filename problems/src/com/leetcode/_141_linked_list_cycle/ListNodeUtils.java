@@ -1,4 +1,4 @@
-package com.leetcode._xx_sample_test;
+package com.leetcode._141_linked_list_cycle;
 
 import java.util.Collection;
 import java.util.LinkedList;
@@ -51,4 +51,3 @@ public class ListNodeUtils {
         return head;
     }
 }
-
