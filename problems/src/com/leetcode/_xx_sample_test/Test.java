@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 /**
- * 12345. Sample test <p>
- * https://leetcode.com/problems/sample-test/ <p>
- * Level: Easy <p>
- *
- * Start time:      2022-04-?? ??:??    <p>
- * End time:        2022-04-?? ??:??
+ * 12345. Sample test
+ * <br> https://leetcode.com/problems/sample-test/
+ * <br> Level: Easy
+ * <br>
+ * <br> Start time:      2022-04-?? ??:??
+ * <br> End time:        2022-04-?? ??:??
  */
 public enum Test {
     EXAMPLE_1(new int[]{1,2,2,1}, true),
