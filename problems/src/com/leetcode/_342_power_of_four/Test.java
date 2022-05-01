@@ -1,26 +1,28 @@
-package com.leetcode._xx_sample_test;
+package com.leetcode._342_power_of_four;
 
 import java.util.Arrays;
 import java.util.function.Function;
 
 /**
- * 12345. Sample test
- * <br> https://leetcode.com/problems/sample-test/
+ * 342. Power of Four
+ * <br> https://leetcode.com/problems/power-of-four/
  * <br> Level: Easy
  * <br>
- * <br> Start time:      2022-05-?? ??:??
- * <br> End time:        2022-05-?? ??:??
+ * <br> Start time:      2022-05-01 18:15
+ * <br> End time:        2022-05-01 18:35
  */
 public enum Test {
-    EXAMPLE_1(new int[]{1,2,2,1}, true),
+    EXAMPLE_1(16, true),
+    EXAMPLE_2(5, false),
+    EXAMPLE_3(1, true),
     ;
 
-    public final ListNode input;
+    public final int input;
 
     public final boolean expectedResult;
 
-    Test(int[] list, boolean expectedResult) {
-        this.input = ListNodeUtils.buildListNode(list);
+    Test(int input, boolean expectedResult) {
+        this.input = input;
         this.expectedResult = expectedResult;
     }
 
@@ -31,7 +33,7 @@ public enum Test {
 //                -> Arrays.stream(primitivesArray).mapToObj(String::valueOf)
 //                    .collect(Collectors.joining(", ", "[", "]"));
 //        Function<Integer, String> primitiveToString = primitive -> "" + primitive;
-        Function<ListNode, String> listNodeToString = ListNodeUtils::listNodeToString;
+//        Function<ListNode, String> listNodeToString = ListNodeUtils::listNodeToString;
 
         String expectedResultString = "" + expectedResult;
         String realResulString = "" + realResult;
@@ -46,7 +48,7 @@ public enum Test {
         final Solution solution = new Solution();
         Arrays.stream(Test.values())
                 .forEach(testData -> {
-                    var realResult = solution.sampleTest(testData.input);
+                    var realResult = solution.isPowerOfFour(testData.input);
                     testData.print(realResult);
                 });
     }
