@@ -2,17 +2,12 @@ package com.leetcode._53_maximum_subarray;
 
 class Solution {
     public int maxSubArray(int[] nums) {
-        int absoluteMax = Integer.MIN_VALUE;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = nums.length; j > i; j--) {
-                int max = 0;
-                for (int k = i; k < j; k++) {
-                    max += nums[k];
-                }
-                if (max > absoluteMax) {
-                    absoluteMax = max;
-                }
-            }
+        int absoluteMax = nums[0];
+        int max = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            max = Math.max(max + nums[i], nums[i]);
+            absoluteMax = Math.max(absoluteMax, max);
         }
         return absoluteMax;
     }

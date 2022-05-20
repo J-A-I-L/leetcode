@@ -12,7 +12,11 @@ import java.util.function.Function;
  * <br> Level: Easy
  * <br>
  * <br> Start time:      2022-05-20 16:15
- * <br> End time:        2022-05-20 16:27
+ * <br> End time:        2022-05-20 16:30
+ * after looking _Discussions_ for a better solution, found optimal one: https://leetcode.com/problems/maximum-subarray/discuss/20211/Accepted-O(n)-solution-in-java
+ * this problem was discussed by Jon Bentley (Sep. 1984 Vol. 27 No. 9 Communications of the ACM P885)
+ *
+ *
  */
 public enum Test {
     EXAMPLE_3(new int[]{5,4,-1,7,8}, 23),
